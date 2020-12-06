@@ -1,0 +1,37 @@
+{
+    "manifest_version": 2,
+    "version": "1.0.0",
+    "name": "TiWIM",
+    "description": "O TiWIM é um plugin que permite o usuário realizar alterações em páginas de sites.",
+    "author": "Fagner Pinheiro Silva",
+    "browser_action": {
+   	    "default_title": "TiWIM - This is What I mean",
+   	    "default_popup": "index.html",
+   	    "default_icon": "icon.png"
+    },
+    "permissions": [
+       "activeTab", 
+       "tabs"      
+    ],    
+    "content_scripts": [
+        {        
+		    "matches": ["<all_urls>"],
+            "js": [
+                "js/injector.js",
+                "tiwim.js"
+            ],
+            "css": [
+                "css/tiwim.css",
+                "css/jquery.contextMenu.css"
+            ],
+            "run_at" : "document_start",
+		    "persistent": false
+        }
+    ],
+    "web_accessible_resources": [
+        "js/injector.js",
+        "js/jquery-1.4.2.min.js",
+        "js/jquery.contextMenu.js",
+        "tiwim.js"
+    ]  
+}

@@ -1,0 +1,247 @@
+#myDiv {
+  width: 150px;
+  border: solid 2px #2aa7de;
+  background: #6cc8ef;
+  text-align: center;
+  padding: 4em 0.5em;
+  margin: 1em;
+  float: left;
+}
+
+#myList {
+  margin: 1em;
+  float: left;
+}
+
+#tiwimFloatMenu {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  background: #fff;
+  /*position: inherit;*/
+}
+
+#myList UL {
+  padding: 0px;
+  margin: 0em 1em;
+}
+
+#myList LI {
+  width: 100px;
+  border: solid 1px #2aa7de;
+  background: #6cc8ef;
+  padding: 5px 5px;
+  margin: 2px 0px;
+  list-style: none;
+}
+
+#tiwim-edit-content {
+  width: 80vw;
+  max-width: calc(100vw - 360px);
+  height: 100vh;
+  display: inline-block;
+}
+
+.tiwim-has-change {
+  position: relative;
+}
+
+.tiwim-has-change::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 0.7em;
+  background: #3d656b;
+  color: #3d656b;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  line-height: 18px;
+  border-radius: 50%;
+  box-shadow: 0 0 1px #333;
+}
+
+.badge {
+  display: inline-block;
+  min-width: 16px; /* pixel unit */
+  padding: 35px 50px; /* pixel unit */
+  border-radius: 50%;
+  font-size: 75px;
+  text-align: center;
+  background: #1779ba;
+  color: #fefefe;
+}
+
+#tiwim-tool-area {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  background: rgba(240, 240, 240);
+  width: 20vw;
+  min-width: 320px;
+  max-width: 380px;
+  height: 100vh;
+  display: inline-block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  z-index: 9999;
+  padding-bottom: 20px;
+  box-shadow: 1px 2px 5px 5px #0003;
+}
+
+#tiwim-tool-area .logo-container {
+  width: calc(100% - 32px);
+  text-align: center;
+  margin: 0 16px;
+  background-color: #fff;
+}
+
+#tiwim-tool-area .logo-container img {
+  width: 80%;
+}
+
+#tiwim-tool-area .on-off-container {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 16px;
+  padding: 0 16px 10px;
+  background: #fff;
+  border-radius: 0 0 5px 5px;
+}
+
+#tiwim-tool-area .on-off-container select {
+  padding: 3px 5px;
+  border-radius: 5px;
+  margin-left: 8px;
+}
+
+#tiwim-tool-area .actions-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 20px;
+  padding: 10px 20x;
+}
+
+#tiwim-tool-area .actions-container .item {
+  display: inline-block;
+  color: #fff;
+  font-weight: 600;
+  min-width: 120px;
+  /* -webkit-box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.4); */
+  border-radius: 4px;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+#tiwim-tool-area .actions-container #undo-action {
+  background: #b90000;
+}
+
+#tiwim-tool-area .actions-container #save-action {
+  background: #1779ba;
+  font-weight: 600;
+}
+
+/* #tiwim-tool-area .actions-container .item:last-child {
+  float: right;
+} */
+
+#tiwim-tool-area .actions-container .item img {
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin-top: 4px;
+}
+
+#tiwim-tool-area .actions-container .item span {
+  width: 100%;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 12px;
+  text-align: center;
+}
+
+#tiwim-tool-area .changes-container {
+  border-radius: 5px;
+  margin: 16px;
+  margin-top: 26px;
+}
+
+#tiwim-tool-area .changes-container .changes-header {
+  border-radius: 5px 5px 0 0;
+  background-color: #fff;
+  border: solid #bababa 1px;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#tiwim-tool-area .changes-container .changes-content {
+  display: flex;
+  flex-direction: column-reverse;
+  max-height: 55vh;
+  border-radius: 0 0 5px 5px;
+  border: solid#bababa 1px;
+  background-color: rgb(245, 245, 245);
+  padding: 5px;
+  overflow: auto;
+}
+
+#tiwim-tool-area .changes-container .changes-content .item {
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.85);
+  font-size: 12px;
+  padding: 10px;
+  border: dotted 1px #1779ba;
+  /*   -webkit-box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.4); */
+  /*  border-radius: 4px; */
+  /* margin-bottom: 16px; */
+}
+
+#tiwim-tool-area .changes-container .changes-content .item:last-child {
+  margin-top: 6px;
+}
+
+#tiwim-tool-area .changes-container .changes-content .item span {
+  display: block;
+}
+
+#tiwim-tool-area .changes-container .changes-content .item span.title {
+  color: #1779ba;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(190, 190, 190);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(129, 129, 129);
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/*div:hover,p:hover,a:hover,li:hover,h1:hover,h2:hover,h3:hover,h4:hover,h5:hover,h6:hover {*/
+/*border: 1px rgba(20, 0, 255, 0.74) solid !important;*/
+/*}*/
+
+/*body *:hover {*/
+/*border: 1px rgba(20, 0, 255, 0.74) solid !important;*/
+/*}*/
