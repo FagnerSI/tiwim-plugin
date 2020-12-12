@@ -1,5 +1,4 @@
 'use strict';
-
 class TiwimElement {
 
   static serialize(el) {
@@ -315,11 +314,8 @@ class Tiwim {
         </div>
            
         <div class="on-off-container">
-            Ativo?
-            <select name="select" id="tiwim-on-off">
-                <option value="on">Sim</option>
-                <option value="off">Não</option>
-            </select>
+          <label for="tiwim-on-off">Ativo?</label>
+          <input type="checkbox" id="tiwim-on-off" name="tiwim-on-off" checked>          
         </div>
 
         <div class="actions-container">
@@ -376,12 +372,14 @@ class Tiwim {
     });
 
     $j('#tiwim-tool-area #save-action').click(function () {
-      self.download();
+      // self.download();
+      alert('Para salvar, apenas faça uma captura de tela (toda a tela). Você pode usar a tecla Prt Sc (Print screen) ou usar uma ferramenta de captura')
     });
 
     $j('#tiwim-tool-area #tiwim-on-off').change(function () {
-      let value = $j('#tiwim-on-off').val();
-      if (value === 'on') {
+      let isChecked = $j('#tiwim-on-off').is(':checked');
+
+      if (isChecked) {
         self.active();
       } else {
         self.disable();
