@@ -129,7 +129,6 @@
 
 #tiwim-tool-area .actions-container .item {
   display: inline-block;
-  color: #fff;
   font-weight: 600;
   min-width: 120px;
   /* -webkit-box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.4);
@@ -161,6 +160,7 @@
 }
 
 #tiwim-tool-area .actions-container .item span {
+  color: #fff;
   width: 100%;
   text-transform: uppercase;
   display: inline-block;
@@ -213,6 +213,7 @@
 }
 
 #tiwim-tool-area .changes-container .changes-content .item span {
+  color: #0e0e0e;
   display: block;
 }
 
